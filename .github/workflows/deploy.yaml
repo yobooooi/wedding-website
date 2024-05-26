@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: telegram
+    runs-on: wedding
 
     steps:
     - name: Checkout Repository
