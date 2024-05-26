@@ -1,0 +1,19 @@
+name: wedding website build and run
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  build:
+    runs-on: telegram
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Docker Build
+      run: | 
+        docker build -t wedding-website .
+        docker run -d -p 80:80 wedding-website
